@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/display"
         app:layout_constraintVertical_bias="0.95"
         tools:layout_editor_absoluteX="1dp">
 
@@ -29,13 +29,13 @@
                 android:background="@drawable/circle"
                 android:backgroundTint="@color/red"
                 android:onClick="clearBUT"
-                android:text="@string/clear"
+                android:text="C"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp" />
 
             <Button
                 android:id="@+id/parenthesesBUT"
-                style="@style/Widget.AppCompat.Button.Borderless"
+                style="@android:style/Widget.Button"
                 android:layout_width="0dp"
                 android:layout_height="70dp"
                 android:layout_margin="5dp"
@@ -305,7 +305,7 @@
     </TableLayout>
 
     <EditText
-        android:id="@+id/textView"
+        android:id="@+id/display"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -324,13 +324,14 @@
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/backspace"
         android:layout_margin="5dp"
         android:background="@drawable/circle"
-        app:srcCompat="@drawable/backspace"
+        android:contentDescription="@string/backspace"
+        android:onClick="backspaceBUT"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/backspace" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
